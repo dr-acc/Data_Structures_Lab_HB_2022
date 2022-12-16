@@ -189,4 +189,3 @@ def find_likeminded_villagers(filename, villager_name):
     return(likeminded)
 
 find_likeminded_villagers("villagers.csv", "Cyrano")
-
