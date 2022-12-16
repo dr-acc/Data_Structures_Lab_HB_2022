@@ -19,7 +19,7 @@ def all_species(filename):
     
     for line in opened_file:
         villager = line.split("|")
-        species.add(villager[0])
+        species.add(villager[1])
 
     #print(species)
     return species
@@ -84,11 +84,13 @@ def all_names_by_hobby(filename):
         for villager in villagers:
             if hobby == villager[3]:
                 names.append(villager[0])
+        names.sort()
         main_list.append(names)
     
-    # print(sorted(main_list[0]))
-    # print(sorted(main_list[1]))
-    return sorted(main_list)
+    #print(sorted(main_list[0]))
+    #print(sorted(main_list[1]))
+    print(main_list)
+    return main_list
 
 all_names_by_hobby("villagers.csv")
 
@@ -183,7 +185,8 @@ def find_likeminded_villagers(filename, villager_name):
 #find villager in list that is in the input parameter, then store their personality as its own variable
 #then iterate over list of lines looking for same personality 
 #add names to set "likeminded"
-    print(likeminded)
+    #print(likeminded)
     return(likeminded)
+
 find_likeminded_villagers("villagers.csv", "Cyrano")
 
